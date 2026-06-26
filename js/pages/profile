@@ -70,3 +70,12 @@ export function renderProfile(view) {
     </div>
   `;
 }
+function calculateRiskAverage(history) {
+  if (!history.length) return 0;
+
+  const total = history.reduce((sum, item) => {
+    return sum + (item.analysis?.riskScore || 0);
+  }, 0);
+
+  return ((total / history.length) * 100).toFixed(0);
+}
