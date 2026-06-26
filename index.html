@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TNET AI</title>
+
+  <!-- Font Awesome Solid -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- ================= LOADER ================= -->
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+    <p>TNET loading...</p>
+  </div>
+
+  <!-- ================= APP ROOT ================= -->
+  <div id="app" class="app hidden">
+
+    <!-- Dynamic Pages Render Here -->
+    <div id="view"></div>
+
+  </div>
+
+  <!-- ================= BOTTOM NAV ================= -->
+  <nav class="bottom-nav">
+
+    <button data-page="home" class="nav-item active">
+      <i class="fa-solid fa-house"></i>
+    </button>
+
+    <button data-page="scan" class="nav-item">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <button data-page="analysis" class="nav-item">
+      <i class="fa-solid fa-chart-column"></i>
+    </button>
+
+    <button data-page="feed" class="nav-item">
+      <i class="fa-solid fa-newspaper"></i>
+    </button>
+
+    <button data-page="profile" class="nav-item">
+      <i class="fa-solid fa-user"></i>
+    </button>
+
+  </nav>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
