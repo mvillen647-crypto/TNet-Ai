@@ -24,3 +24,21 @@ export function initNavigation() {
     });
   });
 }
+function createRipple(button) {
+  const ripple = document.createElement("span");
+
+  ripple.classList.add("ripple");
+
+  const rect = button.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
+
+  ripple.style.width = ripple.style.height = size + "px";
+  ripple.style.left = "50%";
+  ripple.style.top = "50%";
+
+  button.appendChild(ripple);
+
+  setTimeout(() => {
+    ripple.remove();
+  }, 500);
+}
