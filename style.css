@@ -142,3 +142,26 @@ body {
 }
   
 }
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 140, 0, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rippleEffect 500ms ease-out;
+}
+
+@keyframes rippleEffect {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
