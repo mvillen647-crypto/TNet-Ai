@@ -184,3 +184,16 @@ body {
 .stat {
   text-align: center;
 }
+.scan {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preview {
+  margin-top: 10px;
+}
+
+.full {
+  width: 100%;
+}
