@@ -165,3 +165,22 @@ body {
     opacity: 0;
   }
 }
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #1b1b1b, #252525);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.stat {
+  text-align: center;
+}
