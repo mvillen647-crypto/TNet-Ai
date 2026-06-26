@@ -27,3 +27,29 @@ export const CONFIG = {
     TOAST_DURATION: 3000
   }
 };
+export const ENV = {
+  SIGHTENGINE_USER: null,
+  SIGHTENGINE_SECRET: null
+};
+export const CONSTANTS = {
+  SCAN_STATUS: {
+    IDLE: "idle",
+    PROCESSING: "processing",
+    SUCCESS: "success",
+    ERROR: "error"
+  },
+
+  PAGES: {
+    HOME: "home",
+    SCAN: "scan",
+    ANALYSIS: "analysis",
+    FEED: "feed",
+    PROFILE: "profile"
+  }
+};
+export const FEATURES = {
+  VIDEO_SCAN: false,
+  LIVE_CAMERA: false,
+  CLOUD_SYNC: false,
+  AI_CHAT: false
+};
