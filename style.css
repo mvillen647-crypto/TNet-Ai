@@ -227,3 +227,17 @@ body {
   background: linear-gradient(90deg, var(--primary), red);
   transition: width 0.3s ease;
 }
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-item {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+    }
