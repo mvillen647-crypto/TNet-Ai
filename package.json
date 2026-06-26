@@ -1,0 +1,25 @@
+{
+  "name": "tnet-ai",
+  "version": "1.0.0",
+  "description": "TNET AI Trust Platform - Image Authenticity & Deepfake Detection System",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo \"No build step required for vanilla SPA\"",
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "AI",
+    "deepfake",
+    "image-analysis",
+    "sightengine",
+    "verification",
+    "spa"
+  ],
+  "author": "TNET Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
