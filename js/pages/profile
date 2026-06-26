@@ -1,0 +1,72 @@
+/* =====================================
+   TNET - PROFILE PAGE
+===================================== */
+
+import { getState } from "../state.js";
+
+export function renderProfile(view) {
+  const state = getState();
+
+  const history = state.scanHistory || [];
+
+  view.innerHTML = `
+    <div class="profile">
+
+      <!-- USER CARD -->
+      <div class="card">
+        <h2>User Profile</h2>
+        <p class="text-muted">TNET AI Scanner User</p>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>${history.length}</h3>
+            <p class="text-muted">Total Scans</p>
+          </div>
+
+          <div class="stat">
+            <h3>${calculateRiskAverage(history)}%</h3>
+            <p class="text-muted">Avg Risk</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HISTORY -->
+      <div class="card">
+        <h3>Scan History</h3>
+
+        ${
+          history.length === 0
+            ? `<p class="text-muted">No scans yet.</p>`
+            : history
+                .slice(0, 5)
+                .map(
+                  (item) => `
+              <div class="history-item">
+                <p><strong>${item.analysis?.verdict || "Unknown"}</strong></p>
+                <small class="text-muted">
+                  Risk: ${(item.analysis?.riskScore * 100 || 0).toFixed(0)}%
+                </small>
+              </div>
+            `
+                )
+                .join("")
+        }
+
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="card">
+        <h3>Settings</h3>
+
+        <p class="text-muted">
+          Theme: Dark Mode (default)
+        </p>
+
+        <p class="text-muted">
+          AI Engine: Sightengine
+        </p>
+      </div>
+
+    </div>
+  `;
+}
